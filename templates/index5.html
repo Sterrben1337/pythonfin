@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="section-container-spacer text-center">
+            <h1 class="h2">Пользователи на нашем сайте</h1>
+          </div>
+{% for row in people %}
+<div class="container">
+  <img src="bandmember.jpg" alt="Avatar" style="width:90px">
+  <p><h3>{{row[0]}}</h3><h3>{{row[1]}}</h3></p>
+  <h3>{{row[2]}}</h3>
+</div>
+{% endfor %}
+</body>
+</html>
